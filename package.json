@@ -1,0 +1,25 @@
+{
+  "name": "best-tour-plan",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^5.0.0",
+    "sass-lint": "^1.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -wr --source-map true styles/main.scss ./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jihyun85/best-tour-plan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jihyun85/best-tour-plan/issues"
+  },
+  "homepage": "https://github.com/Jihyun85/best-tour-plan#readme"
+}
