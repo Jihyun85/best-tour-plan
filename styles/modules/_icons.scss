@@ -1,0 +1,123 @@
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'best-tour-plan' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-calendar:before {
+  content: '\e900';
+}
+
+.ic-call:before {
+  color: #ffffff;
+  content: '\e901';
+}
+
+.ic-call-fill:before {
+  color: #bdbdbd;
+  content: '\e902';
+}
+
+.ic-chevron:before {
+  content: '\e903';
+}
+
+.ic-circle-check .path1:before {
+  color: rgb(51, 51, 51);
+  content: '\e904';
+}
+
+.ic-circle-check .path2:before {
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
+  content: '\e905';
+}
+
+.ic-email:before {
+  color: #bdbdbd;
+  content: '\e906';
+}
+
+.ic-facebook:before {
+  color: #bdbdbd;
+  content: '\e907';
+}
+
+.ic-gift:before {
+  content: '\e908';
+}
+
+.ic-home:before {
+  color: #ffffff;
+  content: '\e909';
+}
+
+.ic-instagram:before {
+  color: #bdbdbd;
+  content: '\e90a';
+}
+
+.ic-location:before {
+  color: #ffffff;
+  content: '\e90b';
+}
+
+.ic-location-fill:before {
+  color: #bdbdbd;
+  content: '\e90c';
+}
+
+.ic-logo-1 .path1:before {
+  color: rgb(51, 51, 51);
+  content: '\e90d';
+}
+
+.ic-logo-1 .path2:before {
+  margin-left: -9.2626953125em;
+  color: rgb(236, 31, 70);
+  content: '\e90e';
+}
+
+.ic-logo-2 .path1:before {
+  color: rgb(255, 255, 255);
+  content: '\e90f';
+}
+
+.ic-logo-2 .path2:before {
+  margin-left: -0.8740234375em;
+  color: rgb(236, 31, 70);
+  content: '\e910';
+}
+
+.ic-search:before {
+  color: #ffffff;
+  content: '\e911';
+}
+
+.ic-shopping-cart:before {
+  content: '\e912';
+}
+
+.ic-star:before {
+  color: #f2994a;
+  content: '\e913';
+}
+
+.ic-user:before {
+  color: #ffffff;
+  content: '\e914';
+}
+
+.ic-youtube:before {
+  color: #bdbdbd;
+  content: '\e915';
+}
