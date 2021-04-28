@@ -1,0 +1,64 @@
+.top-nav {
+  $md-height: 5rem;
+  $lg-height: 6rem;
+
+  @include flexbox;
+  width: 100%;
+  background-color: $background;
+
+  &-container {
+    @include flexbox(between);
+    width: 100%;
+    height: $md-height;
+    padding: 0 8rem;
+    margin: 0 auto;
+  }
+
+  &-left {
+    p {
+      @include text-style(10, 12, $gray-3);
+      font-weight: 400;
+
+      strong {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &-right {
+    @include flexbox;
+  }
+
+  &-item {
+    @include flexbox;
+    @include text-style(10, 12, $gray-3);
+    height: $md-height;
+
+    &:hover {
+      color: $black;
+    }
+
+    &:last-child {
+      margin-left: 10rem;
+    }
+
+    i {
+      font-size: 1.8rem;
+    }
+
+    p {
+      margin-left: 2rem;
+    }
+  }
+
+  @include responsive(D) {
+    &-container {
+      height: $lg-height;
+      max-width: 114rem;
+
+      &-item {
+        height: $lg-height;
+      }
+    }
+  }
+}
