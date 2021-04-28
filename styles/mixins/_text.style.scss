@@ -1,0 +1,100 @@
+@mixin text-style-8($line-height: 8) {
+  font-size: $font-size-8;
+  @if ($line-height == 10) {
+    line-height: $line-height-8-10;
+  }
+}
+
+@mixin text-style-10($line-height: 12) {
+  font-size: $font-size-10;
+  @if ($line-height == 12) {
+    line-height: $line-height-10-12;
+  }
+  @if ($line-height == 13) {
+    line-height: $line-height-10-13;
+  }
+}
+
+@mixin text-style-12($line-height: 15) {
+  font-size: $font-size-12;
+  @if ($line-height == 15) {
+    line-height: $line-height-12-15;
+  }
+  @if ($line-height == 16) {
+    line-height: $line-height-12-16;
+  }
+  @if ($line-height == 19) {
+    line-height: $line-height-12-19;
+  }
+}
+
+@mixin text-style-13($line-height: 16) {
+  font-size: $font-size-13;
+  @if ($line-height == 16) {
+    line-height: $line-height-13-16;
+  }
+}
+
+@mixin text-style-14($line-height: 17) {
+  font-size: $font-size-14;
+  @if ($line-height == 17) {
+    line-height: $line-height-14-17;
+  }
+  @if ($line-height == 19) {
+    line-height: $line-height-14-19;
+  }
+  @if ($line-height == 22) {
+    line-height: $line-height-14-22;
+  }
+}
+
+@mixin text-style-16($line-height: 20) {
+  font-size: $font-size-16;
+  @if ($line-height == 20) {
+    line-height: $line-height-16-20;
+  }
+}
+
+@mixin text-style-18($line-height: 22) {
+  font-size: $font-size-18;
+  @if ($line-height == 22) {
+    line-height: $line-height-18-22;
+  }
+  @if ($line-height == 24) {
+    line-height: $line-height-18-24;
+  }
+}
+
+@mixin text-style-24($line-height: 30) {
+  font-size: $font-size-24;
+  @if ($line-height == 30) {
+    line-height: $line-height-24-30;
+  }
+}
+
+@mixin text-style($size, $line-height) {
+  @if ($size == 8) {
+    @include text-style-8($line-height);
+  }
+  @if ($size == 10) {
+    @include text-style-10($line-height);
+  }
+  @if ($size == 12) {
+    @include text-style-12($line-height);
+  }
+  @if ($size == 13) {
+    @include text-style-13($line-height);
+  }
+  @if ($size == 14) {
+    @include text-style-14($line-height);
+  }
+  @if ($size == 16) {
+    @include text-style-16($line-height);
+  }
+  @if ($size == 18) {
+    @include text-style-18($line-height);
+  }
+  @if ($size == 24) {
+    @include text-style-24($line-height);
+  }
+}
