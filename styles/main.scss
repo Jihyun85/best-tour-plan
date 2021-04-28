@@ -1,10 +1,11 @@
-@import './base/fonts';
-@import './base/normalize';
-@import './base/reset';
-
 @import './constants/color';
 @import './constants/breakpoint';
 @import './constants/typography';
+
+@import './base/fonts';
+@import './base/normalize';
+@import './base/reset';
+@import './base/globals';
 
 @import './mixins/position';
 @import './mixins/flexbox';
@@ -13,3 +14,5 @@
 
 @import './modules/icons';
 @import './modules/button';
+
+@import './layouts/top-nav';
