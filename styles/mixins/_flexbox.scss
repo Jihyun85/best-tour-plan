@@ -1,0 +1,39 @@
+@function _get-flexbox-value($value) {
+  @if ($value == center) {
+    @return center;
+  }
+  @if ($value == start) {
+    @return flex-start;
+  }
+  @if ($value == end) {
+    @return flex-end;
+  }
+  @if ($value == 'around') {
+    @return space-around;
+  }
+  @if ($value == 'between') {
+    @return space-between;
+  }
+  @if ($value == 'evenly') {
+    @return space-evenly;
+  }
+}
+
+@mixin flexbox($jc: center, $ai: center) {
+  display: flex;
+  align-items: _get-flexbox-value($ai);
+  justify-content: _get-flexbox-value($jc);
+}
+
+@mixin inline-flexbox($jc: center, $ai: center) {
+  display: inline-flex;
+  align-items: _get-flexbox-value($ai);
+  justify-content: _get-flexbox-value($jc);
+}
+
+@mixin flexbox-column($jc: center, $ai: center) {
+  display: flex;
+  align-items: _get-flexbox-value($ai);
+  flex-direction: column;
+  justify-content: _get-flexbox-value($jc);
+}
