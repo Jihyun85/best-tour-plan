@@ -72,7 +72,7 @@
   }
 }
 
-@mixin text-style($size, $line-height) {
+@mixin text-style($size, $line-height, $color: false) {
   @if ($size == 8) {
     @include text-style-8($line-height);
   }
@@ -96,5 +96,9 @@
   }
   @if ($size == 24) {
     @include text-style-24($line-height);
+  }
+
+  @if (type-of($color) == color) {
+    color: $color;
   }
 }
