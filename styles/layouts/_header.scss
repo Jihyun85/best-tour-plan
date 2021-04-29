@@ -1,0 +1,43 @@
+.header {
+  @include flexbox(between);
+  position: relative;
+  height: 4rem;
+  padding: 0 2rem;
+
+  &-left {
+    @include flexbox(start);
+  }
+
+  &-right {
+    @include flexbox(end);
+
+    .header-item:not(:last-child) {
+      margin-left: 1rem;
+    }
+  }
+
+  &-item {
+    position: relative;
+    font-size: 2rem;
+
+    .badge {
+      @include text-style(10, 12, $white);
+      @include inline-flexbox;
+      position: absolute;
+      top: -25%;
+      right: -50%;
+      width: 1.6rem;
+      height: 1.6rem;
+      background-color: $red;
+      border-radius: 50%;
+    }
+  }
+
+  .logo {
+    @include pos-center;
+
+    img {
+      height: 1.6rem;
+    }
+  }
+}

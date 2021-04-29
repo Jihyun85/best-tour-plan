@@ -37,7 +37,9 @@
 
     <div class="header">
       <div class="header-left">
-        <i class="ic-menu sm-only" aria-label="메뉴 열기"></i>
+        <button class="header-item" type="button">
+          <i class="ic-menu sm-only" aria-label="메뉴 열기"></i>
+        </button>
 
         <h1 class="logo">
           <a href="/">
@@ -54,19 +56,21 @@
       </div>
 
       <div class="header-right">
-        <button type="button">
-          <i class="ic-search lg-hidden" aria-label="검색창 열기"></i>
+        <button class="header-item lg-hidden" type="button">
+          <i class="ic-search" aria-label="검색창 열기"></i>
         </button>
-        <a href="/">
+
+        <a class="header-item" href="/">
           <i class="ic-shopping-cart" aria-label="장바구니로 이동"></i>
           <div class="badge" aria-label="장바구니에 5개 물건이 있음">5</div>
         </a>
+
         <div class="header-user sm-hidden">
-          <button type="button">
-            <div class="header-profile">
-              <img src="assets/images/user.jpg" alt="프로필 사진" />
-            </div>
-            <strong>Jihyun</strong>
+          <div class="header-profile">
+            <img src="assets/images/user.jpg" alt="프로필 사진" />
+          </div>
+          <strong class="header-user-name">Jihyun</strong>
+          <button class="header-item" type="button">
             <i class="ic-chevron" aria-label="프로필 메뉴 열기"></i>
           </button>
         </div>
