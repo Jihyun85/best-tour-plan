@@ -1,0 +1,221 @@
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: $navy;
+
+  &-top {
+    @include flexbox-column(center, start);
+  }
+
+  &-logo {
+    @include flexbox(start);
+
+    img {
+      width: 16.6rem;
+    }
+  }
+
+  &-item {
+    a {
+      @include text-style(12, 19, $gray-b);
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &-section {
+    margin-bottom: 1.6rem;
+  }
+
+  &-subtitle {
+    @include text-style(14, 19, $white);
+    margin-bottom: 1rem;
+  }
+
+  &-main {
+    @include flexbox-column(start, start);
+  }
+
+  &-detail {
+    i {
+      margin-right: 1rem;
+      font-size: 1.6rem;
+      color: $gray-b;
+    }
+
+    p,
+    a {
+      @include text-style(12, 13, $gray-b);
+    }
+  }
+
+  &-info {
+    @include flexbox(start, start);
+    margin-top: 1rem;
+  }
+
+  &-form {
+    position: relative;
+
+    &-comment {
+      @include text-style(10, 13, $gray-e);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    &-name {
+      @include flexbox-column(start, start);
+
+      & > input {
+        width: 100%;
+      }
+    }
+
+    input,
+    textarea {
+      padding: 0 1.6rem;
+      margin-bottom: 1rem;
+      background-color: $white;
+      border-radius: 0.4rem;
+      @include text-style(12, 15, $black);
+
+      &::placeholder {
+        @include text-style(10, 13, $gray-b);
+      }
+    }
+
+    input {
+      height: 3rem;
+    }
+
+    textarea {
+      width: 100%;
+      height: 12rem;
+      padding-top: 1.2rem;
+    }
+  }
+
+  &-message {
+    width: 100%;
+  }
+
+  .btn-50 {
+    height: 4rem;
+  }
+
+  &-bottom {
+    @include flexbox;
+    position: relative;
+  }
+
+  &-payment {
+    @include pos-center-y(absolute);
+    right: 0;
+  }
+
+  &-policy {
+    a {
+      @include text-style(10, 13, $white);
+    }
+
+    a:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  @include responsive(T) {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+
+    &-top {
+      @include flexbox(between, start);
+      flex-direction: row;
+      margin-bottom: 5rem;
+    }
+
+    &-section {
+      position: relative;
+    }
+
+    &-subtitle {
+      @include text-style(16, 20);
+      font-weight: 700;
+    }
+
+    &-item {
+      a {
+        @include text-style(14, 22);
+      }
+    }
+
+    &-main {
+      @include flexbox(between, start);
+      flex-direction: row;
+      margin-bottom: 5rem;
+
+      .footer-section {
+        width: 50%;
+      }
+    }
+
+    &-detail {
+      margin-right: 2rem;
+
+      i {
+        font-size: 2.2rem;
+      }
+
+      p,
+      a {
+        @include text-style(14, 22, $gray-b);
+      }
+    }
+
+    &-form {
+      &-comment {
+        @include text-style(12, 15, $gray-e);
+      }
+
+      &-name {
+        @include flexbox(between);
+        flex-direction: row;
+
+        & > input:first-child {
+          margin-right: 1.6rem;
+        }
+      }
+
+      input,
+      textarea {
+        @include text-style(13, 16, $black);
+        margin-bottom: 1.6rem;
+
+        &::placeholder {
+          @include text-style(12, 15, $gray-b);
+          margin-left: 2.4rem;
+        }
+      }
+
+      input {
+        height: 5rem;
+      }
+    }
+
+    .btn-50 {
+      height: 5rem;
+    }
+
+    &-policy {
+      a {
+        @include text-style(12, 15, $white);
+      }
+
+      a:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
