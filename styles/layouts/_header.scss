@@ -1,8 +1,9 @@
 .header {
-  @include flexbox(between);
-  position: relative;
-  height: 4rem;
-  padding: 0 2rem;
+  &-content {
+    @include flexbox(between);
+    position: relative;
+    height: 4rem;
+  }
 
   &-left {
     @include flexbox(start);
@@ -10,26 +11,28 @@
 
   &-right {
     @include flexbox(end);
-
-    .header-item:not(:last-child) {
-      margin-left: 1rem;
-    }
   }
 
   &-item {
     position: relative;
     font-size: 2rem;
+    color: $black;
+
+    &:not(:first-child) {
+      margin-left: 1rem;
+    }
 
     .badge {
       @include text-style(10, 12, $white);
       @include inline-flexbox;
       position: absolute;
       top: -25%;
-      right: -50%;
-      width: 1.6rem;
+      right: -40%;
       height: 1.6rem;
+      min-width: 1.6rem;
+      padding: 0.1rem;
       background-color: $red;
-      border-radius: 50%;
+      border-radius: 9999px;
     }
   }
 
@@ -38,6 +41,83 @@
 
     img {
       height: 1.6rem;
+    }
+  }
+
+  @include responsive(T) {
+    &-content {
+      height: 12rem;
+    }
+
+    .logo {
+      position: initial;
+      margin-right: 10.8rem;
+      transform: none;
+    }
+
+    &-item {
+      font-size: 2.4rem;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+
+      .badge {
+        top: -15%;
+        right: -30%;
+      }
+    }
+
+    &-user {
+      @include flexbox(between);
+      width: 15rem;
+      margin-left: 6.3rem;
+
+      &-name {
+        @include text-style(14, 17, $gray-3);
+      }
+    }
+
+    &-profile {
+      width: 4rem;
+      height: 4rem;
+      overflow: hidden;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    $input-padding: 2.3rem;
+    $search-btn-width: 6.5rem;
+
+    &-search {
+      position: relative;
+      width: 35rem;
+
+      input {
+        width: 100%;
+        height: 4rem;
+        padding-right: $input-padding + $search-btn-width;
+        padding-left: $input-padding;
+        background-color: $background;
+        border-radius: 0.6rem;
+      }
+
+      input::placeholder {
+        color: $gray-3;
+      }
+
+      .btn-search {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
     }
   }
 }
