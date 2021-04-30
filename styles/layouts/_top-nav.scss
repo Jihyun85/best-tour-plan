@@ -6,12 +6,10 @@
   width: 100%;
   background-color: $background;
 
-  &-container {
+  &-content {
     @include flexbox(between);
     width: 100%;
     height: $md-height;
-    padding: 0 8rem;
-    margin: 0 auto;
   }
 
   &-left {
