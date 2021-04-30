@@ -1,0 +1,39 @@
+.lnb {
+  background-color: $navy;
+
+  &-list {
+    @include flexbox(between);
+  }
+
+  &-item {
+    a {
+      @include inline-flexbox;
+      @include text-style(12, 16, $white);
+      width: 100%;
+      height: 6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    &.is-active {
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-item {
+      a {
+        @include text-style(14, 17);
+        height: 8rem;
+      }
+    }
+  }
+}
