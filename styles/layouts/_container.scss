@@ -1,0 +1,16 @@
+$sm-padding: 2rem;
+$md-padding: 8rem;
+
+.container {
+  width: 100%;
+  padding: 0 $sm-padding;
+  margin: 0 auto;
+
+  @include responsive(T) {
+    padding: 0 $md-padding;
+  }
+
+  @include responsive(D) {
+    max-width: 120rem;
+  }
+}
