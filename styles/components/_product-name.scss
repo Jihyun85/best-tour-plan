@@ -1,0 +1,74 @@
+.product-name {
+  @include flexbox-column(start, start);
+  position: relative;
+
+  &-title {
+    @include flexbox-column(start, start);
+    margin: 0.4rem 0;
+
+    h2 {
+      @include text-style(18, 24, $gray-3);
+      margin-right: 1rem;
+      font-weight: 700;
+    }
+
+    .badge {
+      @include flexbox;
+      @include text-style(10, 12, $white);
+      padding: 0.3rem 0.8rem;
+      font-weight: 600;
+      background-color: $red;
+      border-radius: 0.3rem;
+    }
+  }
+
+  &-detail {
+    @include text-style(10, 13);
+  }
+
+  &-rating {
+    @include flexbox-column;
+    @include pos-center-y(absolute);
+    right: 0;
+    padding: 0.8rem;
+    background-color: $red;
+    border-radius: 0.4rem;
+
+    h6 {
+      @include text-style(8, 10, $white);
+      font-weight: 600;
+    }
+
+    span {
+      @include text-style(10, 12, $white);
+    }
+
+    strong {
+      @include text-style(14, 17);
+      font-weight: 700;
+    }
+  }
+
+  @include responsive(T) {
+    &-title {
+      @include flexbox(start);
+      flex-direction: row;
+
+      h2 {
+        @include text-style(18, 24);
+      }
+    }
+
+    &-detail {
+      @include text-style(12, 15);
+    }
+  }
+
+  @include responsive(D) {
+    &-title {
+      h2 {
+        @include text-style(24, 30);
+      }
+    }
+  }
+}
