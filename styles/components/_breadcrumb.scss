@@ -1,0 +1,12 @@
+.breadcrumb {
+  @include inline-flexbox(start);
+
+  a {
+    @include text-style(10, 12, $navy);
+
+    &:not(:first-child)::before {
+      margin: 0 0.5rem;
+      content: '/';
+    }
+  }
+}
