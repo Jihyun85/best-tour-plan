@@ -1,0 +1,12 @@
+.star-rating {
+  @include flexbox(start);
+
+  i {
+    font-size: 0.8rem;
+    color: $yellow;
+
+    &:not(:last-child) {
+      margin-right: 0.3rem;
+    }
+  }
+}
