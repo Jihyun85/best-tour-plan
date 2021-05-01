@@ -21,7 +21,7 @@
     }
 
     .current-price {
-      @include text-style(24, 30, $white);
+      @include text-style(18, 24, $white);
       font-weight: 800;
 
       &::before {
