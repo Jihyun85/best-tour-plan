@@ -23,7 +23,7 @@
   }
 
   &-detail {
-    @include text-style(10, 13);
+    @include text-style(10, 13, $gray-3);
   }
 
   &-rating {
