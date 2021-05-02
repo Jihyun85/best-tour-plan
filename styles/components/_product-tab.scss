@@ -1,0 +1,63 @@
+.product-tab {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  &-list {
+    @include inline-flexbox(between);
+    width: 100%;
+    overflow-x: auto;
+    gap: 1rem;
+  }
+
+  &-item {
+    flex-shrink: 0;
+    height: 2.5rem;
+
+    a {
+      @include flexbox;
+      @include text-style(10, 13, $gray-3);
+      height: 100%;
+      font-weight: 700;
+      border-bottom: 0.3rem solid transparent;
+      transition: color 200ms ease-in-out, border-color 200ms ease-in-out;
+    }
+
+    &:hover {
+      a {
+        color: $red;
+        border-color: $red;
+      }
+    }
+
+    &.is-active {
+      a {
+        color: $red;
+        border-color: $red;
+      }
+    }
+  }
+
+  @include responsive(T) {
+    &-list {
+      gap: 2rem;
+    }
+
+    &-item {
+      a {
+        @include text-style(13, 16);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-item {
+      height: 3.5rem;
+
+      a {
+        @include text-style(14, 17);
+        border-bottom: 0.4rem solid transparent;
+      }
+    }
+  }
+}
