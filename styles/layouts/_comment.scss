@@ -1,0 +1,112 @@
+.comment {
+  $sm-padding: 2rem;
+  $md-padding: 3rem;
+
+  &-title {
+    @include text-style(24, 30, $black);
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  &-container {
+    position: relative;
+
+    .arrow {
+      @include pos-center-y(absolute);
+
+      .ic-chevron {
+        font-size: 2rem;
+        color: $gray-3;
+      }
+
+      &.arrow-left {
+        left: -1rem;
+        transform: rotateZ(90deg);
+      }
+
+      &.arrow-right {
+        right: -1rem;
+        transform: rotateZ(-90deg);
+      }
+    }
+  }
+
+  &-box {
+    @include flexbox-column;
+    position: relative;
+    padding: 4rem $sm-padding 3rem $sm-padding;
+    background-color: $white;
+    border-radius: 0.8rem;
+  }
+
+  &-profile {
+    @include pos-center-x(absolute);
+    top: 0;
+    width: 6rem;
+    height: 6rem;
+    overflow: hidden;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-contents {
+    @include text-style(12, 19, $gray-3);
+  }
+
+  &-username {
+    @include text-style(12, 15, $red);
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  &-date {
+    @include text-style(10, 12, $black);
+    margin-bottom: 0.5rem;
+  }
+
+  .star-rating {
+    margin-bottom: 1rem;
+    .ic-star {
+      font-size: 0.8rem;
+    }
+  }
+
+  @include responsive(T) {
+    &-title {
+      @include text-style(36, 45, $gray-3);
+      margin-bottom: 7rem;
+    }
+
+    &-profile {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    &-container {
+      @include flexbox;
+    }
+
+    &-box {
+      width: 70%;
+      padding: 5rem $md-padding 3rem $md-padding;
+    }
+  }
+
+  @include responsive(D) {
+    &-profile {
+      width: 9rem;
+      height: 9rem;
+    }
+
+    &-box {
+      width: 60%;
+      padding: 6rem $md-padding 4rem $md-padding;
+    }
+  }
+}
