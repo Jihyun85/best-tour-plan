@@ -72,6 +72,13 @@
   }
 }
 
+@mixin text-style-36($line-height: 45) {
+  font-size: $font-size-36;
+  @if ($line-height == 30) {
+    line-height: $line-height-36-45;
+  }
+}
+
 @mixin text-style($size, $line-height, $color: false) {
   @if ($size == 8) {
     @include text-style-8($line-height);
@@ -96,6 +103,9 @@
   }
   @if ($size == 24) {
     @include text-style-24($line-height);
+  }
+  @if ($size == 36) {
+    @include text-style-36($line-height);
   }
 
   @if (type-of($color) == color) {
