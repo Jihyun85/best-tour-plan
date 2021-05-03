@@ -1,0 +1,98 @@
+.newsletter {
+  @include flexbox-column;
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  margin: auto;
+  background-image: url('/assets/images/background-newsletter.jpg');
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    content: '';
+    opacity: 0.5;
+  }
+
+  &-text {
+    z-index: $newsletter-index;
+    margin-bottom: 1rem;
+
+    p {
+      @include text-style(16, 20, $white);
+      font-weight: 300;
+    }
+
+    h3 {
+      @include text-style(24, 30, $white);
+      text-transform: uppercase;
+    }
+  }
+
+  &-form {
+    position: relative;
+    width: 80vw;
+    height: 3.5rem;
+    max-width: 35rem;
+    overflow: hidden;
+    border-radius: 0.4rem;
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding: 0 1.6rem;
+      background-color: $white;
+    }
+
+    input::placeholder {
+      @include text-style(10, 13, $gray-b);
+      font-weight: 300;
+    }
+
+    button {
+      @include pos-center-y(absolute);
+      right: 0;
+      height: 100%;
+    }
+  }
+
+  @include responsive(T) {
+    flex-direction: row;
+
+    &-text {
+      z-index: $newsletter-index;
+      margin-right: 10rem;
+      margin-bottom: 0;
+
+      p {
+        @include text-style(24, 30, $white);
+        font-weight: 300;
+      }
+
+      h3 {
+        font-size: 3.6rem;
+        line-height: 4.518rem;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+
+    &-form {
+      height: 4.5rem;
+
+      input::placeholder {
+        @include text-style(12, 15);
+      }
+    }
+  }
+
+  @include responsive(D) {
+    &-form {
+      height: 5.5rem;
+    }
+  }
+}

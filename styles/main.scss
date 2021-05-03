@@ -1,6 +1,7 @@
 @import './constants/color';
 @import './constants/breakpoint';
 @import './constants/typography';
+@import './constants/z-index';
 
 @import './base/fonts';
 @import './base/normalize';
@@ -31,3 +32,4 @@
 @import './layouts/main';
 @import './layouts/product-header';
 @import './layouts/product-summary';
+@import './layouts/newsletter';
