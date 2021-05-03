@@ -1,9 +1,23 @@
 .product-summary {
-  @include grid(1, 3, 2rem);
-}
+  &-title {
+    @include text-style(18, 24, $black);
+    margin-bottom: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-@include responsive(T) {
-  .product-summary {
-    @include grid(2, 2, 2rem);
+  &-cards {
+    @include grid(1, 3, 2rem);
+  }
+
+  @include responsive(T) {
+    &-title {
+      @include text-style(24, 30, $black);
+      font-weight: 700;
+    }
+
+    &-cards {
+      @include grid(2, 2, 2rem);
+    }
   }
 }

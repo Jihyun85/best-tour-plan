@@ -10,7 +10,7 @@
     padding: 0 $card-margin;
     background-color: $navy;
 
-    h2 {
+    h3 {
       @include text-style(14, 17, $white);
       font-weight: 700;
     }
