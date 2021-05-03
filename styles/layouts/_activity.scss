@@ -12,7 +12,7 @@
   }
 
   &-row {
-    @include flexbox(between, start);
+    @include flexbox;
     flex-wrap: wrap;
     gap: 1rem;
   }
